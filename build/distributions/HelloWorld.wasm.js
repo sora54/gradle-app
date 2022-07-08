@@ -1,0 +1,57 @@
+'use strict';var wasmImports = {
+Web:{
+win_get0:(p)=>window[p],
+get0:(o,p)=>o[p],
+fromChars:(v)=>{v=v[2];var s='';for(var i=0;i<v.length;i++){s+=String.fromCharCode(v[i]);}return s},
+invoke0:(o,m,p1)=>o[m](p1)
+},
+NonGC:{
+new_java_lang_StringBuilder:() => Object.seal({0:532,1:0,2:null,3:0}),
+array_new_u16:(l)=>Object.seal({0:688,1:0,2:Object.seal(new Array(l).fill(null))}),
+new_java_util_Collections$EmptySet:() => Object.seal({0:2880,1:0}),
+new_java_util_Collections$UnmodifiableList:() => Object.seal({0:2604,1:0,2:null,3:null}),
+new_de_inetsoftware_jwebassembly_web_dom_HTMLElement:() => Object.seal({0:324,1:0,2:null}),
+new_java_lang_OutOfMemoryError:() => Object.seal({0:1516,1:0,2:null,3:null,4:null,5:null}),
+new_java_lang_ThreadLocal:() => Object.seal({0:2172,1:0,2:0}),
+new_de_inetsoftware_jwebassembly_web_dom_HTMLAnchorElement:() => Object.seal({0:720,1:0,2:null}),
+new_de_inetsoftware_jwebassembly_web_dom_HTMLCanvasElement:() => Object.seal({0:924,1:0,2:null}),
+new_java_util_concurrent_atomic_AtomicInteger:() => Object.seal({0:2648,1:0,2:0}),
+get_i32:(a,i) => a[i],
+new_de_inetsoftware_jwebassembly_web_dom_Document:() => Object.seal({0:252,1:0,2:null}),
+new_de_inetsoftware_jwebassembly_web_dom_HTMLAreaElement:() => Object.seal({0:788,1:0,2:null}),
+array_new_i32:(l)=>Object.seal({0:1268,1:0,2:new Int32Array(l)}),
+new_java_lang_StringIndexOutOfBoundsException:() => Object.seal({0:1112,1:0,2:null,3:null,4:null,5:null}),
+new_java_lang_NullPointerException:() => Object.seal({0:2832,1:0,2:null,3:null,4:null,5:null}),
+ref_eq:(a,b) => a === b,
+new_java_lang_IllegalArgumentException:() => Object.seal({0:1300,1:0,2:null,3:null,4:null,5:null}),
+get_anyref:(a,i) => a[i],
+array_new_java_lang_StackTraceElement:(l)=>Object.seal({0:1880,1:0,2:Object.seal(new Array(l).fill(null))}),
+set_anyref:(a,v,i) => a[i]=v,
+array_get_i32:(a,i)=>a[2][i],
+new_java_lang_String:() => Object.seal({0:452,1:0,2:null,3:0,4:null}),
+get_externref:(a,i) => a[i],
+new_java_util_Collections$UnmodifiableRandomAccessList:() => Object.seal({0:2552,1:0,2:null,3:null}),
+new_de_inetsoftware_jwebassembly_web_dom_Node:() => Object.seal({0:600,1:0,2:null}),
+array_new_java_lang_Throwable:(l)=>Object.seal({0:2384,1:0,2:Object.seal(new Array(l).fill(null))}),
+new_de_inetsoftware_jwebassembly_web_dom_HTMLDivElement:() => Object.seal({0:992,1:0,2:null}),
+array_set_i32:(a,i,v)=>a[2][i]=v,
+new_java_lang_AssertionError:() => Object.seal({0:2416,1:0,2:null,3:null,4:null,5:null}),
+array_new_java_io_ObjectStreamField:(l)=>Object.seal({0:2044,1:0,2:Object.seal(new Array(l).fill(null))}),
+new_java_lang_String$CaseInsensitiveComparator:() => Object.seal({0:2076,1:0}),
+new_java_util_Collections$EmptyMap:() => Object.seal({0:3044,1:0}),
+array_new_i8:(l)=>Object.seal({0:656,1:0,2:new Uint8Array(l)}),
+new_de_inetsoftware_jwebassembly_web_dom_HTMLButtonElement:() => Object.seal({0:856,1:0,2:null}),
+array_len:(a)=>a[2].length,
+new_java_util_ArrayList:() => Object.seal({0:2332,1:0,2:0,3:null}),
+new_java_lang_Class:() => Object.seal({0:1976,1:0,2:0,3:0}),
+new_de_inetsoftware_jwebassembly_web_dom_Text:() => Object.seal({0:388,1:0,2:null}),
+new_java_util_Collections$EmptyList:() => Object.seal({0:2960,1:0,2:0}),
+set_i32:(a,v,i) => a[i]=v,
+array_new_java_lang_Object:(l)=>Object.seal({0:2492,1:0,2:Object.seal(new Array(l).fill(null))})
+},
+Math:Math,
+System:{
+arraycopy:(src,srcPos,dest,destPos,length)=>{src=src[2];dest=dest[2];if(destPos<srcPos){for (var i=0;i<length;i++)dest[i+destPos]=src[i+srcPos];}else{for (var i=length-1;i>=0;i--)dest[i+destPos]=src[i+srcPos];}}
+}
+};
+if (typeof module !== 'undefined') module.exports = wasmImports;

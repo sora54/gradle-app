@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="HelloWorld.wasm.js"></script>
+</head>
+<body>
+<script>
+    WebAssembly.instantiateStreaming(fetch('HelloWorld.wasm'), wasmImports)
+      .then(obj => {
+        wasmImports.instance = obj.instance;
+        obj.instance.exports.main();
+
+        console.log(obj.instance.exports.add(1300, 200));
+      })
+      .catch(err => document.write(err));
+  </script>
+</body>
+</html>
